@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Honk&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.honk {
+    font-family: "Honk", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "MORF" 15,
+        "SHLN" 50;
+}
+
+#project_title {
+    margin: 20px;
+    font-size: 55px;
+    transition: all 0.5s ease-in-out;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header img {
+    width: 60px;
+    height: 70px;
+    filter: drop-shadow(2px 3px 0px white);
+}
+
+body {
+    padding-bottom: 1rem;
+    background-color: #0b1522;
+}
+
+#forms-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+#forms-container button,
+#forms-container select,
+#forms-container input {
+    padding: 0.4rem;
+    border-radius: 0.625rem;
+}
+
+#forms-container button {
+    cursor: pointer;
+    background-color: rgb(99, 240, 56);
+}
+
+#type-form {
+    display: flex;
+    gap: 0.625rem;
+}
+
+#type-form form select {
+    margin-right: 0.625rem;
+}
+
+#pokemon-container {
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.pokemon-card {
+    width: 200px;
+    height: 300px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    position: relative;
+}
+
+.pokemon-card-front,
+.pokemon-card-back {
+    position: absolute;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.625rem;
+    box-shadow: 0 0 7px 7px rgb(228, 244, 244);
+
+}
+
+.pokemon-card-front {
+    padding: 0.625rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pokemon-card-front .number-and-type-color-container {
+    display: flex;
+    justify-content: space-between;
+    align-self: stretch;
+}
+
+.pokemon-card-front .number-and-type-color-container>div {
+    width: 15px;
+    height: 10px;
+    background-color: rgb(250, 253, 250);
+    border-radius: 50px;
+}
+
+.pokemon-card-front>figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokemon-card-front .weight-height-container {
+    display: flex;
+    justify-content: space-between;
+    align-self: stretch;
+}
+
+.pokemon-card-front .weight-height-container>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokemon-card-front .type-container {
+    padding: 0.625rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.pokemon-card-front .type-container p {
+    padding: 0.3rem;
+    border: 1px solid black;
+    border-radius: 0.625rem;
+}
+
+.pokemon-card-back {
+    transform: rotateY(180deg);
+    padding: 0.625rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.pokemon-card-back .stats p {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    margin-bottom: 0.2rem;
+}
+
+.pokemon-card-container:hover .pokemon-card {
+    transform: rotateY(180deg);
+}
+
+#page-change-btn-container {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+#page-change-btn-container button {
+    padding: 0.625rem;
+    border-radius: 0.625rem;
+    margin-left: 1rem;
+    cursor: pointer;
+    background-color: rgb(255, 255, 0);
+    font-weight: bold;
+}
+
+#page-change-btn-container button:hover {
+    scale: 1.1;
+}
+
+.hidden {
+    display: none;
+}
+
+#to-top-btn {
+    position: fixed;
+    bottom: 1rem;
+    right: 0.1rem;
+    padding: 0.625rem;
+    border-radius: 0.625rem;
+    font-weight: bold;
+    background-color: rgb(255, 255, 0);
+}
+
+#to-top-btn:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
